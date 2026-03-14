@@ -1,4 +1,4 @@
-import { Sparkles, Instagram, Facebook, Mail } from "lucide-react";
+import {Sparkles, Instagram, Facebook, Mail, Send} from "lucide-react";
 
 export default function Footer() {
 	return (
@@ -7,8 +7,9 @@ export default function Footer() {
 				<div className="grid md:grid-cols-3 gap-12 mb-8">
 					<div>
 						<div className="flex items-center gap-2 mb-4">
-							{/*<Sparkles className="w-6 h-6 text-primary" />*/}
-							<span className="text-xl font-semibold text-foreground" style={{ fontFamily: 'Playfair Display, serif' }}>
+							<Sparkles className="w-6 h-6 text-primary"/>
+							<span className="text-xl font-semibold text-foreground"
+							      style={{fontFamily: 'Playfair Display, serif'}}>
                 NO MESS
               </span>
 						</div>
@@ -25,7 +26,7 @@ export default function Footer() {
 						<ul className="space-y-2 text-sm">
 							<li>
 								<button
-									onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+									onClick={() => document.getElementById("about")?.scrollIntoView({behavior: "smooth"})}
 									className="text-foreground/70 hover:text-primary transition-colors"
 								>
 									О нас
@@ -33,7 +34,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<button
-									onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
+									onClick={() => document.getElementById("products")?.scrollIntoView({behavior: "smooth"})}
 									className="text-foreground/70 hover:text-primary transition-colors"
 								>
 									Продукция
@@ -41,7 +42,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<button
-									onClick={() => document.getElementById("events")?.scrollIntoView({ behavior: "smooth" })}
+									onClick={() => document.getElementById("events")?.scrollIntoView({behavior: "smooth"})}
 									className="text-foreground/70 hover:text-primary transition-colors"
 								>
 									Встречи
@@ -54,25 +55,25 @@ export default function Footer() {
 						<h4 className="font-semibold text-foreground mb-4">Соцсети</h4>
 						<div className="flex gap-4">
 							<a
-								href="#"
+								href="https://www.instagram.com/noo_messs"
 								className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
 								aria-label="Instagram"
 							>
-								<Instagram className="w-5 h-5" />
+								<Instagram className="w-5 h-5"/>
 							</a>
 							<a
-								href="#"
+								href="https://t.me/NOmessNOstresss"
 								className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
-								aria-label="Facebook"
+								aria-label="Telegram"
 							>
-								<Facebook className="w-5 h-5" />
+								<Send className="w-5 h-5"/>
 							</a>
 							<a
 								href="#"
 								className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
 								aria-label="Email"
 							>
-								<Mail className="w-5 h-5" />
+								<Mail className="w-5 h-5"/>
 							</a>
 						</div>
 					</div>
