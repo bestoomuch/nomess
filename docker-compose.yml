@@ -11,6 +11,7 @@ services:
       - ./dist:/usr/share/nginx/html:ro
       # Монтируем конфиг nginx
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - /etc/ssl/:/etc/ssl/:ro
     restart: unless-stopped
     networks:
       - nomess-network
