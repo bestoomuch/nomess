@@ -33,7 +33,7 @@ export function ProductsSection() {
 							<img
 								src={cardholderImage}
 								alt="Картхолдер на карабине"
-								className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+								className="w-full h-full object-cover"
 							/>
 						</div>
 

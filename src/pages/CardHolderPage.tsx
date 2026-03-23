@@ -20,7 +20,7 @@ export default function CardholderPage() {
 
 					<div className="grid md:grid-cols-2 gap-12 items-start">
 						{/* Изображение */}
-						<div className="sticky top-28">
+						<div>
 							<div className="aspect-square rounded-2xl overflow-hidden bg-secondary/20 border border-border">
 								<img
 									src={cardholderImage}
