@@ -66,7 +66,7 @@ export function ProductsSection() {
 							<img
 								src={organizerBeige}
 								alt="Органайзер для сумки"
-								className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+								className="w-full h-full object-cover"
 							/>
 						</div>
 

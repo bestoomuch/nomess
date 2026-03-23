@@ -53,7 +53,7 @@ export default function OrganizerPage() {
 
 					<div className="grid md:grid-cols-2 gap-12 items-start">
 						{/* Изображения */}
-						<div className="sticky top-28 space-y-4">
+						<div className="space-y-4">
 							<div className="aspect-square rounded-2xl overflow-hidden bg-secondary/20 border border-border">
 								<img
 									src={organizerBeige}
