@@ -1,4 +1,4 @@
-import {Sparkles, Instagram, Facebook, Mail, Send} from "lucide-react";
+import {Sparkles, Instagram, Mail, Send} from "lucide-react";
 
 export default function Footer() {
 	return (
