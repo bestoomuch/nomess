@@ -1,4 +1,5 @@
 import {Sparkles, Instagram, Mail, Send} from "lucide-react";
+import VkIcon from "@/components/CustomIcons/VkIcon.tsx";
 
 export default function Footer() {
 	return (
@@ -74,6 +75,15 @@ export default function Footer() {
 								aria-label="Email"
 							>
 								<Mail className="w-5 h-5"/>
+							</a>
+							<a
+								href="https://vk.com/no_mess"
+								className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+								aria-label="VK"
+							>
+								<VkIcon
+									size={40}
+								/>
 							</a>
 						</div>
 					</div>
