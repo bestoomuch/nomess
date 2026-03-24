@@ -1,7 +1,32 @@
-import {Sparkles, Instagram, Mail, Send} from "lucide-react";
+import {Sparkles, Instagram, Mail, Send, Copy} from "lucide-react";
 import VkIcon from "@/components/CustomIcons/VkIcon.tsx";
+import { toast } from "sonner";
+import {useEffect, useRef, useState} from "react";
 
 export default function Footer() {
+	const [showEmail, setShowEmail] = useState(false);
+	const emailRef = useRef<HTMLDivElement>(null);
+
+	const copyEmail = () => {
+		const email = "alekseevaksenia2007@yandex.ru";
+		navigator.clipboard.writeText(email).then(() => {
+			toast.success("Почта скопирована!");
+			setShowEmail(false);
+		}).catch(() => {
+			toast.error("Не удалось скопировать");
+		});
+	};
+
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (emailRef.current && !emailRef.current.contains(event.target as Node)) {
+				setShowEmail(false);
+			}
+		};
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => document.removeEventListener("mousedown", handleClickOutside);
+	}, []);
+
 	return (
 		<footer className="bg-foreground/5 border-t border-border py-12 px-6">
 			<div className="container mx-auto max-w-6xl">
@@ -54,7 +79,7 @@ export default function Footer() {
 
 					<div>
 						<h4 className="font-semibold text-foreground mb-4">Соцсети</h4>
-						<div className="flex gap-4">
+						<div className="flex gap-4 relative">
 							<a
 								href="https://www.instagram.com/noo_messs"
 								className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
@@ -69,13 +94,33 @@ export default function Footer() {
 							>
 								<Send className="w-5 h-5"/>
 							</a>
-							<a
-								href="#"
-								className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
-								aria-label="Email"
-							>
-								<Mail className="w-5 h-5"/>
-							</a>
+							<div className="relative flex gap-4 items-center" ref={emailRef}>
+								<button
+									onClick={() => setShowEmail(!showEmail)}
+									className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all cursor-pointer"
+									aria-label="Email"
+								>
+									<Mail className="w-5 h-5" />
+								</button>
+
+								{showEmail && (
+									<div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 z-20 w-80 max-w-[calc(100vw-3rem)] animate-in slide-in-from-bottom-2">
+										<div className="flex items-center gap-2 bg-card border border-border p-3 rounded-lg shadow-lg">
+											<Mail className="w-4 h-4 text-primary shrink-0" />
+											<span className="text-sm text-foreground/70 truncate">
+									          alekseevaksenia2007@yandex.ru
+									        </span>
+											<div
+												onClick={copyEmail}
+												className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all shrink-0 cursor-pointer"
+												aria-label="Скопировать email"
+											>
+												<Copy className="w-4 h-4" />
+											</div>
+										</div>
+									</div>
+								)}
+							</div>
 							<a
 								href="https://vk.com/no_mess"
 								className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
