@@ -1,4 +1,3 @@
-import { useState } from "react";
 import VkIcon from "@/components/CustomIcons/VkIcon.tsx";
 import {Mail, Send} from "lucide-react";
 
@@ -35,7 +34,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
 							rel="noopener noreferrer"
 							className="flex items-center gap-2  hover:underline text-base"
 						>
-							<VkIcon size={30} className="shrink-0" />
+							<VkIcon size={30} />
 							VK: @nomess_manager
 						</a>
 

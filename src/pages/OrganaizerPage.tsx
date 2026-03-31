@@ -8,6 +8,7 @@ import organizerPink from "@/assets/images/organaizer_pink.png"
 import organizerBrown from "@/assets/images/organaizer_dark.png"
 import sizeGrid from "@/assets/images/organaizer_size_net.png"
 import { Swiper, SwiperSlide } from 'swiper/react';
+// @ts-ignore
 import 'swiper/css';
 import ContactModal from "@/components/ContactsModal.tsx";
 
