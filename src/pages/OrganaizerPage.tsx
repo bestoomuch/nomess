@@ -4,8 +4,12 @@ import { Link, useSearchParams } from "react-router"
 import { ArrowLeft, Check } from "lucide-react"
 import { useState } from "react"
 import organizerBeige from "@/assets/images/organaizer.png"
+import organizerPink from "@/assets/images/organaizer_pink.png"
 import organizerBrown from "@/assets/images/organaizer_dark.png"
 import sizeGrid from "@/assets/images/organaizer_size_net.png"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import ContactModal from "@/components/ContactsModal.tsx";
 
 const sizeOptions = [
 	{
@@ -35,6 +39,7 @@ export default function OrganizerPage() {
 	const [searchParams] = useSearchParams();
 	const initialSize = (searchParams.get('size') as 'S' | 'M' | 'L') || 'M';
 	const [selectedSize, setSelectedSize] = useState<'S' | 'M' | 'L'>(initialSize);
+	const [showModal, setShowModal] = useState(false);
 
 	const currentSize = sizeOptions.find(opt => opt.size === selectedSize)!;
 
@@ -54,18 +59,46 @@ export default function OrganizerPage() {
 					<div className="grid md:grid-cols-2 gap-12 items-start">
 						{/* Изображения */}
 						<div className="space-y-4">
-							<div className="aspect-square rounded-2xl overflow-hidden bg-secondary/20 border border-border">
-								<img
-									src={organizerBeige}
-									alt="Органайзер для сумки"
-									className="w-full h-full object-cover"
-								/>
-							</div>
+							<Swiper
+								spaceBetween={10}
+								slidesPerView={1}
+								loop={true}
+								className="aspect-square rounded-2xl overflow-hidden border border-border"
+							>
+								<SwiperSlide>
+									<img
+										src={organizerBeige}
+										alt="Органайзер для сумки"
+										className="w-full h-full object-cover"
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										src={organizerBrown}
+										alt="Органайзер для сумки — вариант 2"
+										className="w-full h-full object-cover"
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										src={organizerPink}
+										alt="Органайзер для сумки — вариант 3"
+										className="w-full h-full object-cover"
+									/>
+								</SwiperSlide>
+								<SwiperSlide>
+									<img
+										src={sizeGrid}
+										alt="Размерная сетка"
+										className="w-full h-full object-cover"
+									/>
+								</SwiperSlide>
+							</Swiper>
 							<div className="grid grid-cols-2 gap-4">
 								<div className="aspect-square rounded-xl overflow-hidden bg-secondary/20 border border-border">
 									<img
-										src={organizerBrown}
-										alt="Органайзер коричневый"
+										src={organizerPink}
+										alt="Органайзер розовый"
 										className="w-full h-full object-cover"
 									/>
 								</div>
@@ -173,7 +206,7 @@ export default function OrganizerPage() {
 							</div>
 
 							{/* Кнопка заказа */}
-							<button className="w-full bg-primary text-primary-foreground py-4 rounded-full hover:bg-primary/90 transition-all hover:scale-105 shadow-lg">
+							<button onClick={() => setShowModal(true)} className="w-full bg-primary text-primary-foreground py-4 rounded-full hover:bg-primary/90 transition-all hover:scale-105 shadow-lg cursor-pointer">
 								Заказать {currentSize.size} за {currentSize.priceStr}
 							</button>
 
@@ -183,6 +216,8 @@ export default function OrganizerPage() {
 						</div>
 					</div>
 				</div>
+
+				<ContactModal isOpen={showModal} onClose={() => setShowModal(false)} />
 			</main>
 			<Footer />
 		</div>

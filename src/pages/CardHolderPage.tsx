@@ -3,8 +3,12 @@ import Footer from "@/components/Footer"
 import { Link } from "react-router";
 import { ArrowLeft, Check } from "lucide-react";
 import cardholderImage from "@/assets/images/cardholder.png";
+import {useState} from "react";
+import ContactModal from "@/components/ContactsModal.tsx";
 
 export default function CardholderPage() {
+	const [showModal, setShowModal] = useState(false);
+
 	return (
 		<div className="min-h-screen flex flex-col">
 			<Header />
@@ -98,7 +102,7 @@ export default function CardholderPage() {
 							</div>
 
 							{/* Кнопка заказа */}
-							<button className="w-full bg-primary text-primary-foreground py-4 rounded-full hover:bg-primary/90 transition-all hover:scale-105 shadow-lg">
+							<button onClick={() => setShowModal(true)} className="w-full cursor-pointer bg-primary text-primary-foreground py-4 rounded-full hover:bg-primary/90 transition-all hover:scale-105 shadow-lg">
 								Заказать за 500 ₽
 							</button>
 
@@ -108,6 +112,8 @@ export default function CardholderPage() {
 						</div>
 					</div>
 				</div>
+
+				<ContactModal isOpen={showModal} onClose={() => setShowModal(false)} />
 			</main>
 			<Footer />
 		</div>
