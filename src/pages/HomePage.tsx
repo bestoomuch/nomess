@@ -1,8 +1,9 @@
 import { HeroSection } from "../components/HeroSection"
 import { AboutSection } from "../components/AboutSection"
 import { ProductsSection } from "../components/ProductsSection"
-import { EventsSection } from "../components/EventSection"
 import DeliverySection from "@/components/DeliverySection.tsx";
+import PastEventsSection from "@/components/PastEventsSection.tsx";
+import ReviewsSection from "@/components/ReviewsSection.tsx";
 
 export default function HomePage() {
 	return (
@@ -10,8 +11,9 @@ export default function HomePage() {
 			<HeroSection />
 			<AboutSection />
 			<ProductsSection />
+			<ReviewsSection />
 			<DeliverySection />
-			<EventsSection />
+			<PastEventsSection />
 		</>
 	)
 }

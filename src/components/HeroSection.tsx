@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import heroLogo from '@/assets/images/logo.png'
 
 export function HeroSection() {
 	const scrollToProducts = () => {
@@ -12,6 +13,13 @@ export function HeroSection() {
 		<section className="min-h-screen flex items-center justify-center pt-20 px-6">
 			<div className="container mx-auto max-w-4xl text-center">
 				<div className="space-y-6">
+					<div className="flex justify-center mb-8">
+						<img
+							src={heroLogo}
+							alt="No Mess Logo"
+							className="w-full max-w-xl md:max-w-2xl h-auto object-contain"
+						/>
+					</div>
 					<h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
 						No Mess — no stress
 					</h1>

@@ -1,5 +1,6 @@
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroLogo from "@/assets/images/logo.png";
 
 export default function Header() {
 	const scrollToSection = (id: string) => {
@@ -15,6 +16,11 @@ export default function Header() {
 				<div className="flex items-center justify-between">
 					<Link to="/" className="flex items-center gap-3">
 						<Sparkles className="w-6 h-6 text-primary" />
+						<img
+							src={heroLogo}
+							alt="No Mess Logo"
+							className="w-full max-w-[80px] h-auto object-contain"
+						/>
 						<div className="flex flex-col" style={{ fontFamily: 'Playfair Display, serif' }}>
 			              <span className="text-xl font-semibold text-foreground leading-none">
 			                NO MESS
@@ -39,7 +45,13 @@ export default function Header() {
 							Продукция
 						</button>
 						<button
-							onClick={() => scrollToSection("events")}
+							onClick={() => scrollToSection("reviews")}
+							className="text-foreground/70 hover:text-primary transition-colors"
+						>
+							Отзывы
+						</button>
+						<button
+							onClick={() => scrollToSection("past-events")}
 							className="text-foreground/70 hover:text-primary transition-colors"
 						>
 							Встречи
