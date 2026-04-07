@@ -1,22 +1,24 @@
-import { Calendar, MapPin, Users } from "lucide-react";
+import { Calendar, MapPin, Users } from "lucide-react"
+import event1 from "@/assets/images/event_1.jpg"
+import event2 from "@/assets/images/event_2.jpg"
 
 export default function PastEventsSection() {
 	const events = [
 		{
-			title: "Мастер-класс по организации сумки",
-			date: "15 марта 2026",
-			location: "м. Серпуховская",
-			participants: "25 участников",
-			description: "Провели увлекательный мастер-класс, где показали, как правильно организовать пространство в сумке. Участницы получили полезные советы и смогли попробовать наши органайзеры.",
-			imageUrl: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop"
+			title: "Весенняя перезагрузка",
+			date: "1 марта",
+			location: "м. Пражская",
+			participants: "16 участников",
+			description: "Провели йогу и составление карты желаний для наведения порядка в голове. Познакомили клиентов с нашим брендом и дали ознакомиться вживую с продукцией.",
+			imageUrl: event1
 		},
 		{
-			title: "Встреча 'Порядок в жизни начинается с мелочей'",
-			date: "28 февраля 2026",
-			location: "м. Серпуховская",
-			participants: "18 участников",
-			description: "Обсудили важность организации личного пространства и поделились лайфхаками. Каждая участница получила возможность протестировать наши продукты.",
-			imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+			title: "Арт-вечер с No Mess",
+			date: "21 марта",
+			location: "м. Бауманская",
+			participants: "15 участников",
+			description: "Провели мастер-класс по кастомизации наших картхолдеров, а также по созданию обвесов на сумку. Предложили к покупке наши органайзеры.",
+			imageUrl: event2
 		},
 	];
 

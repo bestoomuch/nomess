@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 import { useState } from "react"
 import cardholderImage from "@/assets/images/cardholder.png"
-import organizerBeige from "@/assets/images/organaizer.png"
+import organizerBeige from "@/assets/images/organaizer.jpeg"
 
 export function ProductsSection() {
 	const [selectedSize, setSelectedSize] = useState<'S' | 'M' | 'L'>('M');
@@ -28,12 +28,13 @@ export function ProductsSection() {
 
 				<div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 					{/* Картхолдер */}
-					<div className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300">
+					<div className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300"
+					>
 						<div className="aspect-square overflow-hidden bg-secondary/20">
 							<img
 								src={cardholderImage}
 								alt="Картхолдер на карабине"
-								className="w-full h-full object-cover"
+								className="w-full h-full"
 							/>
 						</div>
 
@@ -66,7 +67,7 @@ export function ProductsSection() {
 							<img
 								src={organizerBeige}
 								alt="Органайзер для сумки"
-								className="w-full h-full object-cover"
+								className="w-full h-full"
 							/>
 						</div>
 

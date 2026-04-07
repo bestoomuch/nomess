@@ -29,7 +29,7 @@ export default function CardholderPage() {
 								<img
 									src={cardholderImage}
 									alt="Картхолдер на карабине"
-									className="w-full h-full object-cover"
+									className="w-full h-full"
 								/>
 							</div>
 						</div>
@@ -59,7 +59,7 @@ export default function CardholderPage() {
 									</li>
 									<li className="flex items-start gap-3">
 										<Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-										<span className="text-foreground/80">Вмещает до 2 карт</span>
+										<span className="text-foreground/80">Вмещает 3 карты и наличку</span>
 									</li>
 									<li className="flex items-start gap-3">
 										<Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -115,7 +115,6 @@ export default function CardholderPage() {
 
 				<ContactModal isOpen={showModal} onClose={() => setShowModal(false)} />
 			</main>
-			<Footer />
 		</div>
 	);
 }

@@ -39,11 +39,19 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
 						</a>
 
 						<a
-							href="tel:+79000000000"
+							href="tel:+89258481732 "
 							className="flex items-center gap-2  hover:underline text-base ml-1"
 						>
 							<Mail className="w-4 h-4 shrink-0" />
-							Телефон: +7 (900) 000-00-00
+							Телефон: +7 (925) 848-17-32
+						</a>
+
+						<a
+							href="alekseevaksenia2007@yandex.ru"
+							className="flex items-center gap-2  hover:underline text-base ml-1"
+						>
+							<Mail className="w-4 h-4 shrink-0" />
+							Почта: alekseevaksenia2007@yandex.ru
 						</a>
 					</div>
 				</div>

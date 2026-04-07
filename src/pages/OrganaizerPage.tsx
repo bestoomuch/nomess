@@ -3,9 +3,9 @@ import Footer from "@/components/Footer"
 import { Link, useSearchParams } from "react-router"
 import { ArrowLeft, Check } from "lucide-react"
 import { useState } from "react"
-import organizerBeige from "@/assets/images/organaizer.png"
-import organizerPink from "@/assets/images/organaizer_pink.png"
-import organizerBrown from "@/assets/images/organaizer_dark.png"
+import organizerBeige from "@/assets/images/organaizer.jpeg"
+import organizerPink from "@/assets/images/organaizer_pink.jpeg"
+import organizerBrown from "@/assets/images/organaizer_dark.jpeg"
 import sizeGrid from "@/assets/images/organaizer_size_net.png"
 import { Swiper, SwiperSlide } from 'swiper/react';
 // @ts-ignore
@@ -70,28 +70,28 @@ export default function OrganizerPage() {
 									<img
 										src={organizerBeige}
 										alt="Органайзер для сумки"
-										className="w-full h-full object-cover"
+										className="w-full h-full"
 									/>
 								</SwiperSlide>
 								<SwiperSlide>
 									<img
 										src={organizerBrown}
 										alt="Органайзер для сумки — вариант 2"
-										className="w-full h-full object-cover"
+										className="w-full h-full"
 									/>
 								</SwiperSlide>
 								<SwiperSlide>
 									<img
 										src={organizerPink}
 										alt="Органайзер для сумки — вариант 3"
-										className="w-full h-full object-cover"
+										className="w-full h-full"
 									/>
 								</SwiperSlide>
 								<SwiperSlide>
 									<img
 										src={sizeGrid}
 										alt="Размерная сетка"
-										className="w-full h-full object-cover"
+										className="w-full h-full"
 									/>
 								</SwiperSlide>
 							</Swiper>
@@ -220,7 +220,6 @@ export default function OrganizerPage() {
 
 				<ContactModal isOpen={showModal} onClose={() => setShowModal(false)} />
 			</main>
-			<Footer />
 		</div>
 	);
 }
