@@ -51,66 +51,24 @@ export default function OrganizerPage() {
 				<div className="container mx-auto max-w-6xl">
 					<Link
 						to="/"
-						className="inline-flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors mb-8"
+						className="mt-8 inline-flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors mb-8"
 					>
 						<ArrowLeft className="w-4 h-4" />
 						Назад к продукции
 					</Link>
 
 					<div className="grid md:grid-cols-2 gap-12 items-start">
-						{/* Изображения */}
-						<div className="space-y-4">
-							<Swiper
-								spaceBetween={10}
-								slidesPerView={1}
-								loop={true}
-								className="aspect-square rounded-2xl overflow-hidden border border-border"
-							>
-								<SwiperSlide>
+						{/* Основные изображения */}
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+							{[organizerBeige, organizerBrown, organizerPink, sizeGrid].map((img, i) => (
+								<div key={i} className="w-full rounded-2xl overflow-hidden border border-border">
 									<img
-										src={organizerBeige}
-										alt="Органайзер для сумки"
-										className="w-full h-full"
-									/>
-								</SwiperSlide>
-								<SwiperSlide>
-									<img
-										src={organizerBrown}
-										alt="Органайзер для сумки — вариант 2"
-										className="w-full h-full"
-									/>
-								</SwiperSlide>
-								<SwiperSlide>
-									<img
-										src={organizerPink}
-										alt="Органайзер для сумки — вариант 3"
-										className="w-full h-full"
-									/>
-								</SwiperSlide>
-								<SwiperSlide>
-									<img
-										src={sizeGrid}
-										alt="Размерная сетка"
-										className="w-full h-full"
-									/>
-								</SwiperSlide>
-							</Swiper>
-							<div className="grid grid-cols-2 gap-4">
-								<div className="aspect-square rounded-xl overflow-hidden bg-secondary/20 border border-border">
-									<img
-										src={organizerPink}
-										alt="Органайзер розовый"
-										className="w-full h-full object-cover"
+										src={img}
+										alt="Органайзер"
+										className="w-full h-full sm:h-[600px] sm:w-[400px]"
 									/>
 								</div>
-								<div className="aspect-square rounded-xl overflow-hidden bg-secondary/20 border border-border">
-									<img
-										src={sizeGrid}
-										alt="Размерная сетка"
-										className="w-full h-full object-cover"
-									/>
-								</div>
-							</div>
+							))}
 						</div>
 
 						{/* Информация */}

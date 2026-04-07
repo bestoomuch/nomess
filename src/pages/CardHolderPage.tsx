@@ -16,7 +16,7 @@ export default function CardholderPage() {
 				<div className="container mx-auto max-w-6xl">
 					<Link
 						to="/"
-						className="inline-flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors mb-8"
+						className="mt-8 inline-flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors mb-8"
 					>
 						<ArrowLeft className="w-4 h-4" />
 						Назад к продукции

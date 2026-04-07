@@ -28,7 +28,7 @@ export function ProductsSection() {
 
 				<div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 					{/* Картхолдер */}
-					<div className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300"
+					<div className="group bg-card border-white rounded-2xl overflow-hidden border hover:shadow-xl transition-all duration-300"
 					>
 						<div className="aspect-square overflow-hidden bg-secondary/20">
 							<img
@@ -62,7 +62,7 @@ export function ProductsSection() {
 					</div>
 
 					{/* Органайзер */}
-					<div className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-xl transition-all duration-300">
+					<div className="group bg-card rounded-2xl overflow-hidden border border-white hover:shadow-xl transition-all duration-300">
 						<div className="aspect-square overflow-hidden bg-secondary/20">
 							<img
 								src={organizerBeige}
