@@ -1,5 +1,4 @@
 import Header from "@/components/Header"
-import Footer from "@/components/Footer"
 import { Link, useSearchParams } from "react-router"
 import { ArrowLeft, Check } from "lucide-react"
 import { useState } from "react"
@@ -7,7 +6,6 @@ import organizerBeige from "@/assets/images/organaizer.jpeg"
 import organizerPink from "@/assets/images/organaizer_pink.jpeg"
 import organizerBrown from "@/assets/images/organaizer_dark.jpeg"
 import sizeGrid from "@/assets/images/organaizer_size_net.png"
-import { Swiper, SwiperSlide } from 'swiper/react';
 // @ts-ignore
 import 'swiper/css';
 import ContactModal from "@/components/ContactsModal.tsx";
